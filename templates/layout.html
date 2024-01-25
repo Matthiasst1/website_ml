@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                {% block header %}{% endblock %}
+            </div>
+            <div class="menu">
+                <a class="margin" href="https://matthiasst1-ominous-space-spoon-r5rrrpx9rxq3x5gx-5000.app.github.dev/">PLOT</a>
+                <a href="https://matthiasst1-ominous-space-spoon-r5rrrpx9rxq3x5gx-5000.app.github.dev/points">DATA</a>
+            </div>
+        </div>
+
+        <main class="center">
+
+            <div class="form-container">
+                <div class="form">
+                    <form action= "{{ form_action[0] }}" method="post">
+                        <input class="input" autofocus autocomplete="off" placeholder="x" type="text" name="x" required>
+                        <input class="input" autofocus autocomplete="off" placeholder="y" type="text" name="y" required>
+                        <button type="submit">Add Point</button>
+                    </form>
+                </div>
+                <div>
+                    <form action="{{ form_action[1] }}" method="post">
+                        or use
+                        <button type="submit">Dataset</button>
+                    </form>
+                </div>
+            </div>
+
+            {% block main %}{% endblock %}
+        </main>
+
+        <footer>
+            <div class="left">Student: Matthias Stollenwerk</div>
+            <div class="right">Course: CS50</div>
+        </footer>
+    </body>
+</html>

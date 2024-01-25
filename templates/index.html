@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    How Machines learn
+{% endblock %}
+
+{% block header %}
+    How Machines learn
+{% endblock %}
+
+{% block main %}
+
+<form action="/plot" method="post">
+  <button class="plot" type="submit">Start Machine Learning</button>
+</form>
+
+<!-- Image placeholder -->
+<div id="image_container">
+  <img id="current_image" src="">
+</div>
+
+<script>
+  // Create array of images by tojson
+  const images = {{ img | tojson }};
+
+  // Get image id
+  const image_container = document.getElementById("current_image");
+
+  let current_index = 0;
+  const last_index = images.length - 1;
+
+  // Display image from images
+  function display_image() {
+
+    // If last image is reached keep displaying it
+    if (current_index === last_index) {
+      image_container.src = "data:image/png;base64," + images[last_index];
+      // Else go through images and display them
+    } else {
+      image_container.src = "data:image/png;base64," + images[current_index];
+      current_index = (current_index + 1) % images.length;
+    }
+    // Display image for 1000 milliseconds
+    setTimeout(display_image, 1000);
+  }
+
+  display_image();
+</script>
+
+{% endblock %}

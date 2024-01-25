@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Data Points
+{% endblock %}
+
+{% block header %}
+    Data Points
+{% endblock %}
+
+{% block main %}
+
+<div>
+    <div class="section">
+        <table>
+            <thead>
+                <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for point in points %}
+                <tr>
+                    <th>{{point.x}}</th>
+                    <th>{{point.y}}</th>
+                    <th>
+                        <form action="/delete" method="post">
+                            <input name="id" type="hidden" value="{{ point.id }}">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </th>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+{% endblock %}
