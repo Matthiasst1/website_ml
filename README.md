@@ -1,10 +1,10 @@
-# Project Website: How Machines Learn 
+# Website project: How Machines Learn 
 #### Video Demo:  https://youtu.be/7NOPMAHTB94
 #### Welcome to the documentation of my website project "How Machines Learn".
 
 ## Motivation
 
-The fact that my parents keep asking me whether artificial intelligences will soon take over the world motivates me to decrease the fear towards AI by creating an understanding of how it actually works. My project "How Machines Learn" is a web-based application that uses a Python backend with flask framework, data point storage in SQL, basic web design in HTML, CSS and JavaScript, Python and SQL and explains the mathematical basics of machine learning using a regression line. The regression line is a statistical tool that allows data points to be best represented when they have the smallest overall distance to the line. So, in the same way that AI robots today mimic human behaviour, the regression line mimics the data points as closely as possible. The idea behind this project is to allow the user to interactively play with the data and ultimately gain a better understanding of AI. 
+The fact that my parents keep asking me whether artificial intelligences will soon take over the world motivates me to decrease the fear towards AI by creating an understanding of how it actually works. My project "How Machines Learn" is a web-based application using a Python backend with the Flask framework, data point storage in SQL, basic web design in HTML, CSS and JavaScript. It explains the mathematical basics of machine learning using a regression line. The regression line is a statistical tool that allows data points to be best represented when they have the smallest overall distance to the line. So, in the same way that AI robots today mimic human behaviour, the regression line mimics the data points as closely as possible. The idea behind this project is to allow the user to interactively play with the data and ultimately gain a better understanding of AI. 
 
 ## The Website
 
